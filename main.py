@@ -169,13 +169,22 @@ def rewards_auto_daily_weekly(set):
                     answers = [e.get_attribute("id")
                                for e in driver.find_elements(By.XPATH, '//*[@iscorrectoption="True"]')]
                     print(driver.find_elements(By.XPATH, '//*[@iscorrectoption="True"]'))
-                    for a in answers:
-                        driver.find_element(By.ID, a).click()
-                        pause_pour_veski_le_bot(tps_en_moins=2)
-                        # Si le nb de crédit augmente, on a la bonne de réponse donc on arrete de cliquer sur les
-                        # réponses
-                        if int(driver.find_element(By.CLASS_NAME, "rqECredits").text) == nb*10 + 10:
-                            break
+                    if len(answers) != 0:
+                        for a in answers:
+                            driver.find_element(By.ID, a).click()
+                            pause_pour_veski_le_bot(tps_en_moins=2)
+                            # Si le nb de crédit augmente, on a la bonne de réponse donc on arrete de cliquer sur les
+                            # réponses
+                            if int(driver.find_element(By.CLASS_NAME, "rqECredits").text) == nb*10 + 10:
+                                break
+                    else:
+                        for i in range(4):
+                            driver.find_element(By.ID, f'rqAnswerOption{i}').click()
+                            pause_pour_veski_le_bot(tps_en_moins=2)
+                            # Si le nb de crédit augmente, on a la bonne de réponse donc on arrete de cliquer sur les
+                            # réponses
+                            if int(driver.find_element(By.CLASS_NAME, "rqECredits").text) == nb * 10 + 10:
+                                break
                     pause_pour_veski_le_bot()
                 driver.close()
                 driver.switch_to.window(driver.window_handles[0])

@@ -4,15 +4,16 @@ from os.path import expanduser
 
 def login_ui():
     global output
+    output = None
 
     home_folder = expanduser("~").replace("\\", "/")
 
-    open(home_folder + "/rewauto_data.txt", "w").close()
+    open(home_folder + "/rewauto_data.txt", "a+").close()
     save = open(home_folder + "/rewauto_data.txt", "r")
     data = save.readlines()
     data += ["" for _ in range(2 - len(data))]
 
-    def done():
+    def done(*args):
         savew = open(home_folder + "/rewauto_data.txt", "w")
         data[0] = remember_values[0].get() * email_input.get()
         data[1] = remember_values[1].get() * pass_input.get()
@@ -63,6 +64,7 @@ def login_ui():
     save.close()
 
     tk.Button(root, text="Done", command=done).pack(pady=20)
+    root.bind('<Return>', done)
 
     root.mainloop()
     return output

@@ -7,6 +7,7 @@ def login_ui():
 
     home_folder = expanduser("~").replace("\\", "/")
 
+    open(home_folder + "/rewauto_data.txt", "w").close()
     save = open(home_folder + "/rewauto_data.txt", "r")
     data = save.readlines()
     data += ["" for _ in range(2 - len(data))]

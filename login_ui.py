@@ -1,6 +1,9 @@
 import tkinter as tk
 from os.path import expanduser
 
+from screeninfo import get_monitors
+
+
 
 def login_ui():
     global output
@@ -27,7 +30,10 @@ def login_ui():
         return
 
     root = tk.Tk()
-    root.geometry("500x500")
+    
+    largeur = 500
+    hauteur = 300
+    root.geometry(f"{largeur}x{hauteur}+{str(get_monitors()[0].width/2-largeur/2)[0:-2]}+{str(get_monitors()[0].height/2-(hauteur-50))[0:-2]}")
     root.title("Login")
 
     tk.Label(root, text="Rewauto",
@@ -39,11 +45,11 @@ def login_ui():
     login_frame.pack(pady=20)
 
     tk.Label(login_frame, text="Email:").grid(column=0, row=0)
-    email_input = tk.Entry(login_frame)
+    email_input = tk.Entry(login_frame, width=30)
     email_input.grid(column=1, row=0)
 
     tk.Label(login_frame, text="Password:").grid(column=0, row=1, pady=(10, 0))
-    pass_input = tk.Entry(login_frame, show="●")
+    pass_input = tk.Entry(login_frame, show="●", width=30)
     pass_input.grid(column=1, row=1, pady=(10, 0))
 
     remember_frame = tk.Frame(root)

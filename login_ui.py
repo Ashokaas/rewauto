@@ -25,7 +25,11 @@ def login_ui():
         savew.writelines(data)
         global output
         output = (email_input.get(), pass_input.get())
-        print(output)
+        if True:
+            print(output[0], *["●" for _ in output[1]])
+        else:
+            print(output)
+            
         root.destroy()
         return
 

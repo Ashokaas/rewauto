@@ -32,7 +32,7 @@ def login_ui():
     root = tk.Tk()
     
     largeur = 500
-    hauteur = 300
+    hauteur = 350
     root.geometry(f"{largeur}x{hauteur}+{str(get_monitors()[0].width/2-largeur/2)[0:-2]}+{str(get_monitors()[0].height/2-(hauteur-50))[0:-2]}")
     root.title("Login")
 

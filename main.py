@@ -175,7 +175,8 @@ def rewards_auto_daily_weekly(set):
                             pause_pour_veski_le_bot(tps_en_moins=2)
                             # Si le nb de crédit augmente, on a la bonne de réponse donc on arrete de cliquer sur les
                             # réponses
-                            if int(driver.find_element(By.CLASS_NAME, "rqECredits").text) == nb*10 + 10:
+                            score = driver.find_element(By.CLASS_NAME, "rqECredits").text
+                            if score == '' or int(score) == nb * 10 + 10:
                                 break
                     else:
                         for i in range(4):
@@ -183,7 +184,8 @@ def rewards_auto_daily_weekly(set):
                             pause_pour_veski_le_bot(tps_en_moins=2)
                             # Si le nb de crédit augmente, on a la bonne de réponse donc on arrete de cliquer sur les
                             # réponses
-                            if int(driver.find_element(By.CLASS_NAME, "rqECredits").text) == nb * 10 + 10:
+                            score = driver.find_element(By.CLASS_NAME, "rqECredits").text
+                            if score == '' or int(score) == nb * 10 + 10:
                                 break
                     pause_pour_veski_le_bot()
                 driver.close()

@@ -89,6 +89,7 @@ def changer_url(url:str):
 # ________________________________________________________
 
 def mobile(enabled=True):
+    '''
     if enabled:
         set_device_metrics_override = dict({
             "width": 375,
@@ -103,7 +104,11 @@ def mobile(enabled=True):
             "deviceScaleFactor": 0,
             "mobile": False
         })
-    driver.execute_cdp_cmd('Emulation.setDeviceMetricsOverride', set_device_metrics_override)
+    driver.execute_cdp_cmd('Emulation.setDeviceMetricsOverride', set_device_metrics_override)'''
+    if enabled:
+        pyautogui.hotkey('ctrl', 'shift', 'i')
+        sleep(1)
+        pyautogui.hotkey('ctrl', 'shift', 'm')
 
 # ________________________________________________________
 

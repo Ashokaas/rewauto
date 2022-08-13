@@ -388,13 +388,16 @@ def code_de_gaming(email, mdp, liste_recherches):
             recherches(nb_pc=35, nb_tel=25, liste_recherches=liste_recherches)
 
         playsound(sound='notif.mp3')
+        
+        driver.close()
+        
         ToastNotifier().show_toast(title="Microsoft Rewards", msg="Toutes les tâches ont été effectuées", duration=10)
 
 
 
     except Exception as e:
 
-        playsound(sound='notif.mp3')
+        playsound(sound='error.mp3')
         ToastNotifier().show_toast(title="Microsoft Rewards", msg="Erreur", duration=10)
 
         print(e)

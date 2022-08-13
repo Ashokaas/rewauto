@@ -299,6 +299,13 @@ def code_de_gaming(email, mdp, liste_recherches):
         mdp_input.send_keys(Keys.ENTER)
 
         pause_pour_veski_le_bot()
+        
+        if check_element('By.ID', 'passwordError') == True:
+            if driver.find_element(By.ID, 'passwordError').text in 'Votre compte ou mot de passe est incorrect. Si vous avez oublié votre mot de passe, redéfinissez-le ici.':
+                driver.close()
+                playsound(sound='error.mp3')
+                ToastNotifier().show_toast(title="Microsoft Rewards", msg="Erreur, email ou mot de passe invalide", duration=10)
+                return print('Erreur, email ou mot de passe invalide')
 
 
         # Rester connecté (Bouton à cocher)
@@ -402,7 +409,7 @@ def code_de_gaming(email, mdp, liste_recherches):
 
         print(e)
         print(traceback.print_exc())
-
+        
 #            ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 #            ------- FAIRE TOUS LES TRUCS -------
 #            ____________________________________

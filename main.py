@@ -353,7 +353,7 @@ def code_de_gaming(email, mdp, liste_recherches):
                 'link' : driver.find_element(By.XPATH, f'//*[@id="daily-sets"]/mee-card-group[1]/div/mee-card[{e+1}]'),
                 'check': is_check(driver.find_element(By.XPATH, f'//*[@id="daily-sets"]/mee-card-group[1]/div/mee-card[{e+1}]/div/card-content/mee-rewards-daily-set-item-content/div/a/mee-rewards-points/div/div/span[1]').get_attribute('class')),
                 'pts'  : driver.find_element(By.XPATH, f'//*[@id="daily-sets"]/mee-card-group[1]/div/mee-card[{e+1}]/div/card-content/mee-rewards-daily-set-item-content/div/a/mee-rewards-points/div/div/span[2]').text,
-                'type' : what_type(element=driver.find_element(By.XPATH, f'//*[@id="daily-sets"]/mee-card-group[1]/div/mee-card[{e+1}]/div/card-content/mee-rewards-daily-set-item-content/div/a/div[2]/h3').text, description=driver.find_element(By.XPATH, '//*[@id="daily-sets"]/mee-card-group[1]/div/mee-card[1]/div/card-content/mee-rewards-daily-set-item-content/div/a/div[2]/p').text)
+                'type' : what_type(element=driver.find_element(By.XPATH, f'//*[@id="daily-sets"]/mee-card-group[1]/div/mee-card[{e+1}]/div/card-content/mee-rewards-daily-set-item-content/div/a/div[2]/h3').text, description=driver.find_element(By.XPATH, f'//*[@id="daily-sets"]/mee-card-group[1]/div/mee-card[{e+1}]/div/card-content/mee-rewards-daily-set-item-content/div/a/div[2]/p').text)
             })
 
 

@@ -51,10 +51,24 @@ def login_ui():
     tk.Label(login_frame, text="Email:").grid(column=0, row=0)
     email_input = tk.Entry(login_frame, width=30)
     email_input.grid(column=1, row=0)
-
+    
+    global pass_input, is_hidden
+    is_hidden = True
+    
     tk.Label(login_frame, text="Password:").grid(column=0, row=1, pady=(10, 0))
     pass_input = tk.Entry(login_frame, show="●", width=30)
     pass_input.grid(column=1, row=1, pady=(10, 0))
+    
+    def show_password():
+        global is_hidden
+        if is_hidden == True:
+            pass_input.configure(show="")
+            is_hidden = False
+        elif is_hidden == False:
+            pass_input.configure(show="●")
+            is_hidden = True
+        
+    tk.Button(login_frame, text="👁️", command=show_password).grid(column=2, row=1)
 
     remember_frame = tk.Frame(root)
     remember_frame.pack()

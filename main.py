@@ -200,13 +200,13 @@ def rewards_auto_daily_weekly(set):
                 truc['link'].click()
                 pause_pour_veski_le_bot()
                 driver.switch_to.window(driver.window_handles[-1])
-                pyautogui.click(274, 935)
+                driver.find_element(By.ID, "rqStartQuiz").click()
                 sleep(1)
                 for question in range(10):
                     if randint(1, 2) == 1:
-                        pyautogui.click(645, 840)
+                        driver.find_element(By.ID, 'rqAnswerOption0').click()
                     else:
-                        pyautogui.click(1150, 840)
+                        driver.find_element(By.ID, 'rqAnswerOption1').click()
                     pause_pour_veski_le_bot()
                 driver.close()
                 driver.switch_to.window(driver.window_handles[0])

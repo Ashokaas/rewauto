@@ -20,7 +20,6 @@ from login_ui import login_ui
 
 
 
-
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 # ---- EMAIL, MDP, LISTE ANIMAUX ----
 # ____________________________________
@@ -32,7 +31,7 @@ email, mdp = login_ui()
 liste_recherches = ['Canida', 'Felida', 'Ca', 'Cattl', 'Do', 'Donke', 'Goa', 'Guinea pi', 'Hors', 'Pi', 'Rabbi', 'Fancy rat varietie', 'laboratory rat strain', 'Sheep breed', 'Water buffalo breed', 'Chicken breed', 'Duck breed', 'Goose breed', 'Pigeon breed', 'Turkey breed', 'Aardvar', 'Aardwol', 'African buffal', 'African elephan', 'African leopar', 'Albatros', 'Alligato', 'Alpac', 'American buffalo (bison', 'American robi', 'Amphibia', 'lis', 'Anacond', 'Angelfis', 'Anglerfis', 'An', 'Anteate', 'Antelop', 'Antlio', 'Ap', 'Aphi', 'Arabian leopar', 'Arctic Fo', 'Arctic Wol', 'Armadill', 'Arrow cra', 'As', 'Ass (donkey', 'Baboo', 'Badge', 'Bald eagl', 'Bandicoo', 'Barnacl', 'Barracud', 'Basilis', 'Bas', 'Ba', 'Beaked whal', 'Bea', 'lis', 'Beave', 'Bedbu', 'Be', 'Beetl', 'Bir', 'lis', 'Biso', 'Blackbir', 'Black panthe', 'Black widow spide', 'Blue bir', 'Blue ja', 'Blue whal', 'Bo', 'Boa', 'Bobca', 'Bobolin', 'Bonob', 'Boob', 'Box jellyfis', 'Bovi', 'Buffalo, Africa', 'Buffalo, American (bison', 'Bu', 'Butterfl', 'Buzzar', 'Came', 'Cani', 'Cape buffal', 'Capybar', 'Cardina', 'Caribo', 'Car', 'Ca', 'lis', 'Catshar', 'Caterpilla', 'Catfis', 'Cattl', 'lis', 'Centiped', 'Cephalopo', 'Chameleo', 'Cheeta', 'Chickade', 'Chicke', 'lis', 'Chimpanze', 'Chinchill', 'Chipmun', 'Cla', 'Clownfis', 'Cobr', 'Cockroac', 'Co', 'Condo', 'Constricto', 'Cora', 'Couga', 'Co', 'Coyot', 'Cra', 'Cran', 'Crane fl', 'Crawda', 'Crayfis', 'Cricke', 'Crocodil', 'Cro', 'Cucko', 'Cicad', 'Damselfl', 'Dee', 'Ding', 'Dinosau', 'lis', 'Do', 'lis', 'Dolphi', 'Donke', 'lis', 'Dormous', 'Dov', 'Dragonfl', 'Drago', 'Duc', 'lis', 'Dung beetl', 'Eagl', 'Earthwor', 'Earwi', 'Echidn', 'Ee', 'Egre', 'Elephan', 'Elephant sea', 'El', 'Em', 'English pointe', 'Ermin', 'Falco', 'Ferre', 'Finc', 'Firefl', 'Fis', 'Flaming', 'Fle', 'Fl', 'Flyingfis', 'Fow', 'Fo', 'Fro', 'Fruit ba', 'Gamefow', 'lis', 'Gallifor', 'lis', 'Gazell', 'Geck', 'Gerbi', 'Giant pand', 'Giant squi', 'Gibbo', 'Gila monste', 'Giraff', 'Goa', 'lis', 'Goldfis', 'Goos', 'lis', 'Gophe', 'Gorill', 'Grasshoppe', 'Great blue hero', 'Great white shar', 'Grizzly bea', 'Ground shar', 'Ground slot', 'Grous', 'Gua', 'lis', 'Guanac', 'Guineafow', 'lis', 'Guinea pi', 'lis', 'Gul', 'Gupp', 'Haddoc', 'Halibu', 'Hammerhead shar', 'Hamste', 'Har', 'Harrie', 'Haw', 'Hedgeho', 'Hermit cra', 'Hero', 'Herrin', 'Hippopotamu', 'Hookwor', 'Horne', 'Hors', 'lis', 'Hoverfl', 'Hummingbir', 'Humpback whal', 'Hyen', 'Iguan', 'Impal', 'Irukandji jellyfis', 'Jacka', 'Jagua', 'Ja', 'Jellyfis', 'Junglefow', 'Kangaro', 'Kangaroo mous', 'Kangaroo ra', 'Kingfishe', 'Kit', 'Kiw', 'Koal', 'Ko', 'Komodo drago', 'Kril', 'Ladybu', 'Lampre', 'Landfow', 'Land snai', 'Lar', 'Leec', 'Lemmin', 'Lemu', 'Leopar', 'Leopo', 'Limpe', 'Lio', 'Lizar', 'Llam', 'Lobste', 'Locus', 'Loo', 'Lous', 'Lungfis', 'Lyn', 'Maca', 'Mackere', 'Magpi', 'Mamma', 'Manate', 'Mandril', 'Manta ra', 'Marli', 'Marmose', 'Marmo', 'Marsupia', 'Marte', 'Mastodo', 'Meadowlar', 'Meerka', 'Min', 'Minno', 'Mit', 'Mockingbir', 'Mol', 'Mollus', 'Mongoos', 'Monitor lizar', 'Monke', 'Moos', 'Mosquit', 'Mot', 'Mountain goa', 'Mous', 'Mul', 'Musko', 'Narwha', 'New', 'New World quai', 'Nightingal', 'Ocelo', 'Octopu', 'Old World quai', 'Opossu', 'Oranguta', 'Orc', 'Ostric', 'Otte', 'Ow', 'O', 'Pand', 'Panthe', 'Panthera hybri', 'Parakee', 'Parro', 'Parrotfis', 'Partridg', 'Peacoc', 'Peafow', 'Pelica', 'Pengui', 'Perc', 'Peregrine falco', 'Pheasan', 'Pi', 'Pigeo', 'lis', 'Pik', 'Pilot whal', 'Pinnipe', 'Piranh', 'Planaria', 'Platypu', 'Polar bea', 'Pon', 'Porcupin', 'Porpois', "Portuguese man o' wa", 'Possu', 'Prairie do', 'Praw', 'Praying manti', 'Primat', 'Ptarmiga', 'Puffi', 'Pum', 'Pytho', 'Quai', 'Quele', 'Quokk', 'Rabbi', 'lis', 'Raccoo', 'Rainbow trou', 'Ra', 'Rattlesnak', 'Rave', 'Ray (Batoidea', 'Ray (Rajiformes', 'Red pand', 'Reindee', 'Reptil', 'Rhinocero', 'Right whal', 'Roadrunne', 'Roden', 'Roo', 'Rooste', 'Roundwor', 'Saber-toothed ca', 'Sailfis', 'Salamande', 'Salmo', 'Sawfis', 'Scale insec', 'Scallo', 'Scorpio', 'Seahors', 'Sea lio', 'Sea slu', 'Sea snai', 'Shar', 'lis', 'Shee', 'lis', 'Shre', 'Shrim', 'Silkwor', 'Silverfis', 'Skin', 'Skun', 'Slot', 'Slu', 'Smel', 'Snai', 'Snak', 'lis', 'Snip', 'Snow leopar', 'Sockeye salmo', 'Sol', 'Sparro', 'Sperm whal', 'Spide', 'Spider monke', 'Spoonbil', 'Squi', 'Squirre', 'Starfis', 'Star-nosed mol', 'Steelhead trou', 'Stingra', 'Stoa', 'Stor', 'Sturgeo', 'Sugar glide', 'Swallo', 'Swa', 'Swif', 'Swordfis', 'Swordtai', 'Tah', 'Taki', 'Tapi', 'Tarantul', 'Tarsie', 'Tasmanian devi', 'Termit', 'Ter', 'Thrus', 'Tic', 'Tige', 'Tiger shar', 'Tiglo', 'Toa', 'Tortois', 'Touca', 'Trapdoor spide', 'Tree fro', 'Trou', 'Tun', 'Turke', 'lis', 'Turtl', 'Tyrannosauru', 'Uria', 'Vampire ba', 'Vampire squi', 'Vicun', 'Vipe', 'Vol', 'Vultur', 'Wallab', 'Walru', 'Was', 'Warble', 'Water Bo', 'Water buffal', 'Wease', 'Whal', 'Whippe', 'Whitefis', 'Whooping cran', 'Wildca', 'Wildebees', 'Wildfow', 'Wol', 'Wolverin', 'Womba', 'Woodpecke', 'Wor', 'Wre', 'Xerina', 'X-ray fis', 'Ya', 'Yellow perc', 'Zebr', 'Zebra finc', 'Animals by number of neuron', 'Animals by siz', 'Common household pest', 'Common names of poisonous animal', 'Alpac', 'Bali cattl', 'Ca', 'Cattl', 'Chicke', 'Do', 'Domestic Bactrian came', 'Domestic canar', 'Domestic dromedary came', 'Domestic duc', 'Domestic goa', 'Domestic goos', 'Domestic guineafow', 'Domestic hedgeho', 'Domestic pi', 'Domestic pigeo', 'Domestic rabbi', 'Domestic silkmot', 'Domestic silver fo', 'Domestic turke', 'Donke', 'Fancy mous', 'Fancy ra', 'Lab ra', 'Ferre', 'Gaya', 'Goldfis', 'Guinea pi', 'Gupp', 'Hors', 'Ko', 'Llam', 'Ringneck dov', 'Shee', 'Siamese fighting fis', 'Society finc', 'Ya']
 
 
-driver = webdriver.Chrome(executable_path='driver/chromedriver.exe')
+driver = webdriver.Chrome(executable_path=r'C:\Users\antot\Desktop\rewauto-main\driver\chromedriver.exe')
 
 
 
@@ -138,78 +137,81 @@ def recherches(nb_pc:int=40, nb_tel:int=30, liste_recherches:list=['banane', 'ou
 # Effectue toutes les taches
 
 def rewards_auto_daily_weekly(set):
-    for truc in set:
-        pause_pour_veski_le_bot()
+    try:
+        for truc in set:
+            pause_pour_veski_le_bot()
 
-        if truc['check'] == False:
-            if truc['type'] == 'normal_link':
-                truc['link'].click()
-                pause_pour_veski_le_bot()
-                pause_pour_veski_le_bot()
-                driver.switch_to.window(driver.window_handles[-1])
-                driver.close()
-                driver.switch_to.window(driver.window_handles[0])
-
-            elif truc['type'] == 'sondage':
-                truc['link'].click()
-                pause_pour_veski_le_bot()
-                pause_pour_veski_le_bot()
-                driver.switch_to.window(driver.window_handles[-1])
-                if randint(1, 2) == 1:
-                    driver.find_element(By.ID, "btoption0").click()
-                else:
-                    driver.find_element(By.ID, "btoption1").click()
-                pause_pour_veski_le_bot()
-                pause_pour_veski_le_bot()
-                driver.close()
-                driver.switch_to.window(driver.window_handles[0])
-
-            elif truc['type'] == 'quiz':
-                truc['link'].click()
-                pause_pour_veski_le_bot()
-                driver.switch_to.window(driver.window_handles[-1])
-                driver.find_element(By.ID, "rqStartQuiz").click()
-                sleep(1)
-                for nb in range(3):
-                    answers = [e.get_attribute("id")
-                               for e in driver.find_elements(By.XPATH, '//*[@iscorrectoption="True"]')]
-                    print(driver.find_elements(By.XPATH, '//*[@iscorrectoption="True"]'))
-                    if len(answers) != 0:
-                        for a in answers:
-                            driver.find_element(By.ID, a).click()
-                            pause_pour_veski_le_bot(tps_en_moins=2)
-                            # Si le nb de crédit augmente, on a la bonne de réponse donc on arrete de cliquer sur les
-                            # réponses
-                            score = driver.find_element(By.CLASS_NAME, "rqECredits").text
-                            if score == '' or int(score) == nb * 10 + 10:
-                                break
-                    else:
-                        for i in range(4):
-                            driver.find_element(By.ID, f'rqAnswerOption{i}').click()
-                            pause_pour_veski_le_bot(tps_en_moins=2)
-                            # Si le nb de crédit augmente, on a la bonne de réponse donc on arrete de cliquer sur les
-                            # réponses
-                            score = driver.find_element(By.CLASS_NAME, "rqECredits").text
-                            if score == '' or int(score) == nb * 10 + 10:
-                                break
+            if truc['check'] == False:
+                if truc['type'] == 'normal_link':
+                    truc['link'].click()
                     pause_pour_veski_le_bot()
-                driver.close()
-                driver.switch_to.window(driver.window_handles[0])
+                    pause_pour_veski_le_bot()
+                    driver.switch_to.window(driver.window_handles[-1])
+                    driver.close()
+                    driver.switch_to.window(driver.window_handles[0])
 
-            elif truc['type'] == 'ceci_cela_quiz':
-                truc['link'].click()
-                pause_pour_veski_le_bot()
-                driver.switch_to.window(driver.window_handles[-1])
-                driver.find_element(By.ID, "rqStartQuiz").click()
-                sleep(1)
-                for question in range(10):
+                elif truc['type'] == 'sondage':
+                    truc['link'].click()
+                    pause_pour_veski_le_bot()
+                    pause_pour_veski_le_bot()
+                    driver.switch_to.window(driver.window_handles[-1])
                     if randint(1, 2) == 1:
-                        driver.find_element(By.ID, 'rqAnswerOption0').click()
+                        driver.find_element(By.ID, "btoption0").click()
                     else:
-                        driver.find_element(By.ID, 'rqAnswerOption1').click()
+                        driver.find_element(By.ID, "btoption1").click()
                     pause_pour_veski_le_bot()
-                driver.close()
-                driver.switch_to.window(driver.window_handles[0])
+                    pause_pour_veski_le_bot()
+                    driver.close()
+                    driver.switch_to.window(driver.window_handles[0])
+
+                elif truc['type'] == 'quiz':
+                    truc['link'].click()
+                    pause_pour_veski_le_bot()
+                    driver.switch_to.window(driver.window_handles[-1])
+                    driver.find_element(By.ID, "rqStartQuiz").click()
+                    sleep(1)
+                    for nb in range(3):
+                        answers = [e.get_attribute("id")
+                                for e in driver.find_elements(By.XPATH, '//*[@iscorrectoption="True"]')]
+                        print(driver.find_elements(By.XPATH, '//*[@iscorrectoption="True"]'))
+                        if len(answers) != 0:
+                            for a in answers:
+                                driver.find_element(By.ID, a).click()
+                                pause_pour_veski_le_bot(tps_en_moins=2)
+                                # Si le nb de crédit augmente, on a la bonne de réponse donc on arrete de cliquer sur les
+                                # réponses
+                                score = driver.find_element(By.CLASS_NAME, "rqECredits").text
+                                if score == '' or int(score) == nb * 10 + 10:
+                                    break
+                        else:
+                            for i in range(4):
+                                driver.find_element(By.ID, f'rqAnswerOption{i}').click()
+                                pause_pour_veski_le_bot(tps_en_moins=2)
+                                # Si le nb de crédit augmente, on a la bonne de réponse donc on arrete de cliquer sur les
+                                # réponses
+                                score = driver.find_element(By.CLASS_NAME, "rqECredits").text
+                                if score == '' or int(score) == nb * 10 + 10:
+                                    break
+                        pause_pour_veski_le_bot()
+                    driver.close()
+                    driver.switch_to.window(driver.window_handles[0])
+
+                elif truc['type'] == 'ceci_cela_quiz':
+                    truc['link'].click()
+                    pause_pour_veski_le_bot()
+                    driver.switch_to.window(driver.window_handles[-1])
+                    driver.find_element(By.ID, "rqStartQuiz").click()
+                    sleep(1)
+                    for question in range(10):
+                        if randint(1, 2) == 1:
+                            driver.find_element(By.ID, 'rqAnswerOption0').click()
+                        else:
+                            driver.find_element(By.ID, 'rqAnswerOption1').click()
+                        pause_pour_veski_le_bot()
+                    driver.close()
+                    driver.switch_to.window(driver.window_handles[0])
+    except:
+        print("Erreur sur la récupération des défis")
 # ________________________________________________________
 
 
@@ -389,10 +391,8 @@ def code_de_gaming(email, mdp, liste_recherches):
         rewards_auto_daily_weekly(weekly_set)
 
 
-        if driver.find_element(By.XPATH, '//*[@id="meeBanner"]/div/div/mee-persona/div[2]/persona-body/p[1]').text == 'Niveau 1':
-            recherches(nb_pc=12, nb_tel=0, liste_recherches=liste_recherches)
-        else:
-            recherches(nb_pc=35, nb_tel=25, liste_recherches=liste_recherches)
+
+        recherches(nb_pc=35, nb_tel=25, liste_recherches=liste_recherches)
 
         playsound(sound='sound_effects/notif.mp3')
         
